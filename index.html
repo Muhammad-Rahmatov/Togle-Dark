@@ -7,6 +7,7 @@
                 --text-color: #000;
                 --toggler-bg-color: #ccc;
             }
+
             body {
                 display: flex;
                 flex-direction: column;
@@ -15,19 +16,19 @@
                 align-items: center;
                 background-color: var(--bg-color);
             }
-            .toggler-container {
+            .togler-container {
                 width: 70px;
                 height: 40px;
                 border-radius: 50px;
                 background-color: var(--toggler-bg-color);
-                display: flex6;
+                display: flex;
                 align-items: center;
                 cursor: pointer;
             }
             span {
                 width: 35px;
                 height: 35px;
-                background-color: #fff;
+                background-color: #000;
                 border-radius: 50px;
                 margin-left: 3px;
                 transition: all 0.4s ease;
@@ -41,7 +42,9 @@
                 --toggler-bg-color: #32a1fc; 
             }
             body.dark-mode span {
-                transform: translateX(82%); 
+                transform: translateX(82%);
+                background-color: #fff;
+                
             }
         </style>
     </head>
@@ -49,14 +52,16 @@
         <div class="togler-container"><span></span></div>
         <div class="content">
             <h3>Dark/light Mode Toggler</h3>
-            <p>Thisn is how the text in both <br> of the modes would </p>
+            <p>This is how the text in both <br> of the modes would look like.</p></div>
             <script>
                 const toggleSwitc = document.querySelector(`.togler-container`)
                 const body = document.body;
 
                 toggleSwitc.addEventListener('click', () => {
                  body.classList.toggle('dark-mode');
-                })
+                });
+
+
             </script>
     </body>
 </html>
